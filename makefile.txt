@@ -1,0 +1,24 @@
+# PROGRAM:    assign4 makefile
+# PROGRAMMER: Abraham Rodriguez
+# LOGON ID:   Z1758468
+# DATE DUE:   10/17/2014
+#
+
+# Compiler variables
+CCFLAGS = -ansi -Wall
+FILE = assign11
+
+# Rule to link object code files to create executable file
+$(FILE): $(FILE).o
+    g++ $(CCFLAGS) -o $(FILE) $(FILE).o 
+
+# Rules to compile source code files to object code
+$(FILE).o: $(FILE).cpp 
+    g++ $(CCFLAGS) -c $(FILE).cpp
+
+#$(FILE1).o: $(FILE1).cpp $(FILE1).h
+#   g++ $(CCFLAGS) -c $(FILE1).cpp
+
+# Pseudo-target to remove object code and executable files
+clean:
+    -rm *.o $(FILE)

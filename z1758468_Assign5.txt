@@ -1,0 +1,831 @@
+mysql> source Z1758468_Assign5.sql
++---------------+-----------------------+
+| city          | count(employeeNumber) |
++---------------+-----------------------+
+| Boston        |                     2 |
+| London        |                     2 |
+| NYC           |                     2 |
+| Paris         |                     5 |
+| San Francisco |                     6 |
+| Sydney        |                     4 |
+| Tokyo         |                     2 |
++---------------+-----------------------+
+7 rows in set (0.00 sec)
+
++-----------+-----------+-----------------------+
+| firstName | lastName  | COUNT(customerNumber) |
++-----------+-----------+-----------------------+
+| Leslie    | Jennings  |                     6 |
+| Leslie    | Thompson  |                     6 |
+| Julie     | Firrelli  |                     6 |
+| Steve     | Patterson |                     6 |
+| Foon Yue  | Tseng     |                     7 |
+| George    | Vanauf    |                     8 |
+| Loui      | Bondur    |                     6 |
+| Gerard    | Hernandez |                     7 |
+| Pamela    | Castillo  |                    10 |
+| Larry     | Bott      |                     8 |
+| Barry     | Jones     |                     9 |
+| Andy      | Fixter    |                     5 |
+| Peter     | Marsh     |                     5 |
+| Mami      | Nishi     |                     5 |
+| Martin    | Gerard    |                     6 |
++-----------+-----------+-----------------------+
+15 rows in set (0.00 sec)
+
++-----------+-----------+-----------+----------------+
+| reportsTo | firstName | lastName  | employeeNumber |
++-----------+-----------+-----------+----------------+
+|      NULL | Diane     | Murphy    |           1002 |
+|      1002 | Mary      | Patterson |           1056 |
+|      1002 | Jeff      | Firrelli  |           1076 |
+|      1056 | William   | Patterson |           1088 |
+|      1056 | Gerard    | Bondur    |           1102 |
+|      1056 | Anthony   | Bow       |           1143 |
+|      1143 | Leslie    | Jennings  |           1165 |
+|      1143 | Leslie    | Thompson  |           1166 |
+|      1143 | Julie     | Firrelli  |           1188 |
+|      1143 | Steve     | Patterson |           1216 |
+|      1143 | Foon Yue  | Tseng     |           1286 |
+|      1143 | George    | Vanauf    |           1323 |
+|      1102 | Loui      | Bondur    |           1337 |
+|      1102 | Gerard    | Hernandez |           1370 |
+|      1102 | Pamela    | Castillo  |           1401 |
+|      1102 | Larry     | Bott      |           1501 |
+|      1102 | Barry     | Jones     |           1504 |
+|      1088 | Andy      | Fixter    |           1611 |
+|      1088 | Peter     | Marsh     |           1612 |
+|      1088 | Tom       | King      |           1619 |
+|      1088 | Mami      | Nishi     |           1621 |
+|      1088 | Yoshimi   | Kato      |           1625 |
+|      1102 | Martin    | Gerard    |           1702 |
++-----------+-----------+-----------+----------------+
+23 rows in set (0.00 sec)
+
++------------------+-----------------+--------------------+
+| contactFirstName | contactLastName | sum(amount)        |
++------------------+-----------------+--------------------+
+| Adrian           | Huxley          |  9777417.430000005 |
+| Akiko            | Shimamura       |  9777417.430000005 |
+| Alejandra        | Camino          |  9777417.430000005 |
+| Alexander        | Feuer           | 19554834.859999996 |
+| Allen            | Nelson          |  9777417.430000005 |
+| Ann              | Brown           |  9777417.430000005 |
+| Anna             | O'Hara          |  9777417.430000005 |
+| Annette          | Roulet          |  9777417.430000005 |
+| Armand           | Kuger           |  9777417.430000005 |
+| Arnold           | Cruz            |  9777417.430000005 |
+| Bradley          | Schuyler        |  9777417.430000005 |
+| Brydey           | Walker          |  9777417.430000005 |
+| Carine           | Schmitt         |  9777417.430000005 |
+| Carmen           | Anton           |  9777417.430000005 |
+| Catherine        | Dewey           |  9777417.430000005 |
+| Christina        | Berglund        |  9777417.430000005 |
+| Dan              | Lewis           |  9777417.430000005 |
+| Daniel           | Da Cunha        | 19554834.859999996 |
+| Dean             | Cassidy         |  9777417.430000005 |
+| Diego            | Freyre          |  9777417.430000005 |
+| Dominique        | Perrier         |  9777417.430000005 |
+| Ed               | Pon             |  9777417.430000005 |
+| Eduardo          | Saavedra        |  9777417.430000005 |
+| Elizabeth        | Devon           | 19554834.859999996 |
+| Eric             | Natividad       |  9777417.430000005 |
++------------------+-----------------+--------------------+
+25 rows in set (0.00 sec)
+
++--------------------------------------------------------+
+| COUNT(DISTINCT customerNumber, salesRepEmployeeNumber) |
++--------------------------------------------------------+
+|                                                    100 |
++--------------------------------------------------------+
+1 row in set (0.00 sec)
+
++-------------------+-----------------------+
+| city              | COUNT(customerNumber) |
++-------------------+-----------------------+
+| Aachen            |                     1 |
+| Allentown         |                     1 |
+| Amsterdam         |                     1 |
+| Auckland          |                     3 |
+| Barcelona         |                     1 |
+| Bergamo           |                     1 |
+| Bergen            |                     1 |
+| Berlin            |                     1 |
+| Bern              |                     1 |
+| Boston            |                     2 |
+| Brandenburg       |                     1 |
+| Brickhaven        |                     3 |
+| Bridgewater       |                     1 |
+| Brisbane          |                     1 |
+| Bruxelles         |                     1 |
+| Bräcke            |                     1 |
+| Burbank           |                     1 |
+| Burlingame        |                     1 |
+| Cambridge         |                     2 |
+| Central Hong Kong |                     1 |
+| Charleroi         |                     1 |
+| Chatswood         |                     1 |
+| Chempet           |                     1 |
+| Cork              |                     1 |
+| Cowes             |                     1 |
+| Cunewalde         |                     1 |
+| Dublin            |                     1 |
+| Espoo             |                     1 |
+| Frankfurt         |                     2 |
+| Fribourg          |                     1 |
+| Genève            |                     1 |
+| Glen Waverly      |                     1 |
+| Glendale          |                     2 |
+| Graz              |                     1 |
+| Helsinki          |                     1 |
+| Herzlia           |                     1 |
+| Kobenhavn         |                     1 |
+| Köln              |                     1 |
+| Las Vegas         |                     1 |
+| Leipzig           |                     1 |
+| Lille             |                     1 |
+| Lisboa            |                     2 |
+| Liverpool         |                     1 |
+| London            |                     2 |
+| Los Angeles       |                     1 |
+| Luleå             |                     1 |
+| Lyon              |                     1 |
+| Madrid            |                     5 |
+| Makati City       |                     1 |
+| Manchester        |                     1 |
+| Mannheim          |                     1 |
+| Marseille         |                     1 |
+| Melbourne         |                     1 |
+| Milan             |                     1 |
+| Minato-ku         |                     1 |
+| Montréal          |                     1 |
+| Munich            |                     1 |
+| München           |                     1 |
+| Münster           |                     1 |
+| Nantes            |                     2 |
+| Nashua            |                     1 |
+| New Bedford       |                     2 |
+| New Haven         |                     2 |
+| Newark            |                     1 |
+| North Sydney      |                     1 |
+| NYC               |                     5 |
+| Osaka             |                     1 |
+| Oslo              |                     1 |
+| Oulu              |                     1 |
+| Paris             |                     3 |
+| Pasadena          |                     1 |
+| Philadelphia      |                     2 |
+| Reggio Emilia     |                     1 |
+| Reims             |                     1 |
+| Saint Petersburg  |                     1 |
+| Salzburg          |                     1 |
+| San Diego         |                     1 |
+| San Francisco     |                     2 |
+| San Jose          |                     1 |
+| San Rafael        |                     1 |
+| Sevilla           |                     1 |
+| Singapore         |                     3 |
+| South Brisbane    |                     1 |
+| Stavern           |                     1 |
+| Strasbourg        |                     1 |
+| Stuttgart         |                     1 |
+| Torino            |                     1 |
+| Toulouse          |                     1 |
+| Tsawassen         |                     1 |
+| Vancouver         |                     1 |
+| Versailles        |                     1 |
+| Warszawa          |                     1 |
+| Wellington        |                     1 |
+| White Plains      |                     1 |
+| Århus             |                     1 |
++-------------------+-----------------------+
+95 rows in set (0.00 sec)
+
++------------------------------------+---------------+
+| customerName                       | MAX(buyPrice) |
++------------------------------------+---------------+
+| Alpha Cognac                       |        103.42 |
+| American Souvenirs Inc             |        103.42 |
+| Amica Models & Co.                 |        103.42 |
+| ANG Resellers                      |        103.42 |
+| Anna's Decorations, Ltd            |        103.42 |
+| Anton Designs, Ltd.                |        103.42 |
+| Asian Shopping Network, Co         |        103.42 |
+| Asian Treasures, Inc.              |        103.42 |
+| Atelier graphique                  |        103.42 |
+| Australian Collectables, Ltd       |        103.42 |
+| Australian Collectors, Co.         |        103.42 |
+| Australian Gift Network, Co        |        103.42 |
+| Auto Associés & Cie.               |        103.42 |
+| Auto Canal+ Petit                  |        103.42 |
+| Auto-Moto Classics Inc.            |        103.42 |
+| AV Stores, Co.                     |        103.42 |
+| Baane Mini Imports                 |        103.42 |
+| Bavarian Collectables Imports, Co. |        103.42 |
+| BG&E Collectables                  |        103.42 |
+| Blauer See Auto, Co.               |        103.42 |
+| Boards & Toys Co.                  |        103.42 |
+| CAF Imports                        |        103.42 |
+| Cambridge Collectables Co.         |        103.42 |
+| Canadian Gift Exchange Network     |        103.42 |
+| Classic Gift Ideas, Inc            |        103.42 |
+| Classic Legends Inc.               |        103.42 |
+| Clover Collections, Co.            |        103.42 |
+| Collectable Mini Designs Co.       |        103.42 |
+| Collectables For Less Inc.         |        103.42 |
+| Corporate Gift Ideas Co.           |        103.42 |
+| Corrida Auto Replicas, Ltd         |        103.42 |
+| Cramer Spezialitäten, Ltd          |        103.42 |
+| Cruz & Sons Co.                    |        103.42 |
+| Daedalus Designs Imports           |        103.42 |
+| Danish Wholesale Imports           |        103.42 |
+| Der Hund Imports                   |        103.42 |
+| Diecast Classics Inc.              |        103.42 |
+| Diecast Collectables               |        103.42 |
+| Double Decker Gift Stores, Ltd     |        103.42 |
+| Down Under Souveniers, Inc         |        103.42 |
+| Dragon Souveniers, Ltd.            |        103.42 |
+| Enaco Distributors                 |        103.42 |
+| Euro+ Shopping Channel             |        103.42 |
+| Extreme Desk Decorations, Ltd      |        103.42 |
+| Feuer Online Stores, Inc           |        103.42 |
+| Franken Gifts, Co                  |        103.42 |
+| Frau da Collezione                 |        103.42 |
+| FunGiftIdeas.com                   |        103.42 |
+| Gift Depot Inc.                    |        103.42 |
+| Gift Ideas Corp.                   |        103.42 |
+| Gifts4AllAges.com                  |        103.42 |
+| giftsbymail.co.uk                  |        103.42 |
+| GiftsForHim.com                    |        103.42 |
+| Handji Gifts& Co                   |        103.42 |
+| Havel & Zbyszek Co                 |        103.42 |
+| Heintze Collectables               |        103.42 |
+| Herkku Gifts                       |        103.42 |
+| Iberia Gift Imports, Corp.         |        103.42 |
+| Kelly's Gift Shop                  |        103.42 |
+| King Kong Collectables, Co.        |        103.42 |
+| Kommission Auto                    |        103.42 |
+| Kremlin Collectables, Co.          |        103.42 |
+| L'ordine Souveniers                |        103.42 |
+| La Corne D'abondance, Co.          |        103.42 |
+| La Rochelle Gifts                  |        103.42 |
+| Land of Toys Inc.                  |        103.42 |
+| Lisboa Souveniers, Inc             |        103.42 |
+| Lyon Souveniers                    |        103.42 |
+| Marseille Mini Autos               |        103.42 |
+| Marta's Replicas Co.               |        103.42 |
+| Men 'R' US Retailers, Ltd.         |        103.42 |
+| Messner Shopping Network           |        103.42 |
+| Microscale Inc.                    |        103.42 |
+| Mini Auto Werke                    |        103.42 |
+| Mini Caravy                        |        103.42 |
+| Mini Classics                      |        103.42 |
+| Mini Creations Ltd.                |        103.42 |
+| Mini Gifts Distributors Ltd.       |        103.42 |
+| Mini Wheels Co.                    |        103.42 |
+| Mit Vergnügen & Co.                |        103.42 |
+| Motor Mint Distributors Inc.       |        103.42 |
+| Muscle Machine Inc                 |        103.42 |
+| Natürlich Autos                    |        103.42 |
+| Norway Gifts By Mail, Co.          |        103.42 |
+| Online Diecast Creations Co.       |        103.42 |
+| Online Mini Collectables           |        103.42 |
+| Osaka Souveniers Co.               |        103.42 |
+| Oulu Toy Supplies, Inc.            |        103.42 |
+| Petit Auto                         |        103.42 |
+| Porto Imports Co.                  |        103.42 |
+| Precious Collectables              |        103.42 |
+| Québec Home Shopping Network       |        103.42 |
+| Raanan Stores, Inc                 |        103.42 |
+| Reims Collectables                 |        103.42 |
+| Rovelli Gifts                      |        103.42 |
+| Royal Canadian Collectables, Ltd.  |        103.42 |
+| Royale Belge                       |        103.42 |
+| Salzburg Collectables              |        103.42 |
+| SAR Distributors, Co               |        103.42 |
+| Saveley & Henriot, Co.             |        103.42 |
+| Scandinavian Gift Ideas            |        103.42 |
+| Schuyler Imports                   |        103.42 |
+| Signal Collectibles Ltd.           |        103.42 |
+| Signal Gift Stores                 |        103.42 |
+| Souveniers And Things Co.          |        103.42 |
+| Stuttgart Collectable Exchange     |        103.42 |
+| Stylish Desk Decors, Co.           |        103.42 |
+| Suominen Souveniers                |        103.42 |
+| Super Scale Inc.                   |        103.42 |
+| Technics Stores Inc.               |        103.42 |
+| Tekni Collectables Inc.            |        103.42 |
+| The Sharp Gifts Warehouse          |        103.42 |
+| Tokyo Collectables, Ltd            |        103.42 |
+| Toms Spezialitäten, Ltd            |        103.42 |
+| Toys of Finland, Co.               |        103.42 |
+| Toys4GrownUps.com                  |        103.42 |
+| UK Collectables, Ltd.              |        103.42 |
+| Vida Sport, Ltd                    |        103.42 |
+| Vitachrome Inc.                    |        103.42 |
+| Volvo Model Replicas, Co           |        103.42 |
+| Warburg Exchange                   |        103.42 |
+| West Coast Collectables Co.        |        103.42 |
++------------------------------------+---------------+
+122 rows in set (0.00 sec)
+
++------------------------------------+
+| customerName                       |
++------------------------------------+
+| Alpha Cognac                       |
+| American Souvenirs Inc             |
+| Amica Models & Co.                 |
+| ANG Resellers                      |
+| Anna's Decorations, Ltd            |
+| Anton Designs, Ltd.                |
+| Asian Shopping Network, Co         |
+| Asian Treasures, Inc.              |
+| Atelier graphique                  |
+| Australian Collectables, Ltd       |
+| Australian Collectors, Co.         |
+| Australian Gift Network, Co        |
+| Auto Associés & Cie.               |
+| Auto Canal+ Petit                  |
+| Auto-Moto Classics Inc.            |
+| AV Stores, Co.                     |
+| Baane Mini Imports                 |
+| Bavarian Collectables Imports, Co. |
+| BG&E Collectables                  |
+| Blauer See Auto, Co.               |
+| Boards & Toys Co.                  |
+| CAF Imports                        |
+| Cambridge Collectables Co.         |
+| Canadian Gift Exchange Network     |
+| Classic Gift Ideas, Inc            |
+| Classic Legends Inc.               |
+| Clover Collections, Co.            |
+| Collectable Mini Designs Co.       |
+| Collectables For Less Inc.         |
+| Corporate Gift Ideas Co.           |
+| Corrida Auto Replicas, Ltd         |
+| Cramer Spezialitäten, Ltd          |
+| Cruz & Sons Co.                    |
+| Daedalus Designs Imports           |
+| Danish Wholesale Imports           |
+| Der Hund Imports                   |
+| Diecast Classics Inc.              |
+| Diecast Collectables               |
+| Double Decker Gift Stores, Ltd     |
+| Down Under Souveniers, Inc         |
+| Dragon Souveniers, Ltd.            |
+| Enaco Distributors                 |
+| Euro+ Shopping Channel             |
+| Extreme Desk Decorations, Ltd      |
+| Feuer Online Stores, Inc           |
+| Franken Gifts, Co                  |
+| Frau da Collezione                 |
+| FunGiftIdeas.com                   |
+| Gift Depot Inc.                    |
+| Gift Ideas Corp.                   |
+| Gifts4AllAges.com                  |
+| giftsbymail.co.uk                  |
+| GiftsForHim.com                    |
+| Handji Gifts& Co                   |
+| Havel & Zbyszek Co                 |
+| Heintze Collectables               |
+| Herkku Gifts                       |
+| Iberia Gift Imports, Corp.         |
+| Kelly's Gift Shop                  |
+| King Kong Collectables, Co.        |
+| Kommission Auto                    |
+| Kremlin Collectables, Co.          |
+| L'ordine Souveniers                |
+| La Corne D'abondance, Co.          |
+| La Rochelle Gifts                  |
+| Land of Toys Inc.                  |
+| Lisboa Souveniers, Inc             |
+| Lyon Souveniers                    |
+| Marseille Mini Autos               |
+| Marta's Replicas Co.               |
+| Men 'R' US Retailers, Ltd.         |
+| Messner Shopping Network           |
+| Microscale Inc.                    |
+| Mini Auto Werke                    |
+| Mini Caravy                        |
+| Mini Classics                      |
+| Mini Creations Ltd.                |
+| Mini Gifts Distributors Ltd.       |
+| Mini Wheels Co.                    |
+| Mit Vergnügen & Co.                |
+| Motor Mint Distributors Inc.       |
+| Muscle Machine Inc                 |
+| Natürlich Autos                    |
+| Norway Gifts By Mail, Co.          |
+| Online Diecast Creations Co.       |
+| Online Mini Collectables           |
+| Osaka Souveniers Co.               |
+| Oulu Toy Supplies, Inc.            |
+| Petit Auto                         |
+| Porto Imports Co.                  |
+| Precious Collectables              |
+| Québec Home Shopping Network       |
+| Raanan Stores, Inc                 |
+| Reims Collectables                 |
+| Rovelli Gifts                      |
+| Royal Canadian Collectables, Ltd.  |
+| Royale Belge                       |
+| Salzburg Collectables              |
+| SAR Distributors, Co               |
+| Saveley & Henriot, Co.             |
+| Scandinavian Gift Ideas            |
+| Schuyler Imports                   |
+| Signal Collectibles Ltd.           |
+| Signal Gift Stores                 |
+| Souveniers And Things Co.          |
+| Stuttgart Collectable Exchange     |
+| Stylish Desk Decors, Co.           |
+| Suominen Souveniers                |
+| Super Scale Inc.                   |
+| Technics Stores Inc.               |
+| Tekni Collectables Inc.            |
+| The Sharp Gifts Warehouse          |
+| Tokyo Collectables, Ltd            |
+| Toms Spezialitäten, Ltd            |
+| Toys of Finland, Co.               |
+| Toys4GrownUps.com                  |
+| UK Collectables, Ltd.              |
+| Vida Sport, Ltd                    |
+| Vitachrome Inc.                    |
+| Volvo Model Replicas, Co           |
+| Warburg Exchange                   |
+| West Coast Collectables Co.        |
++------------------------------------+
+122 rows in set, 33184 warnings (0.03 sec)
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| productDescription                                                                                                                                                                                                                                                                            |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| This replica features working kickstand, front suspension, gear-shift lever, footbrake lever, drive chain, wheels and steering. All parts are particularly delicate due to their precise scale and require special care and attention.                                                        |
+| 1:12 scale die-cast about 20" long Hood opens, Rubber wheels                                                                                                                                                                                                                                  |
+| This model features, opening hood, opening doors, detailed engine, rear spoiler, opening trunk, working steering, tinted windows, baked enamel finish. Color yellow.                                                                                                                          |
+| Chrome Trim, Chrome Grille, Opening Hood, Opening Doors, Opening Trunk, Detailed Engine, Working Steering System                                                                                                                                                                              |
+| Exact replica. Wood and Metal. Many extras including rigging, long boats, pilot house, anchors, etc. Comes with three masts, all square-rigged.                                                                                                                                               |
+| This replica features opening doors, superb detail and craftsmanship, working steering system, opening forward compartment, opening rear trunk with removable spare, 4 wheel independent spring suspension as well as factory baked enamel finish.                                            |
+| Features Gold Trim, Full Size Spare Tire, Chrome Trim, Chrome Grille, Opening Hood, Opening Doors, Opening Trunk, Detailed Engine, Working Steering System                                                                                                                                    |
+| Features opening hood, opening doors, opening trunk, wide white wall tires, front door arm rests, working steering system, leather upholstery. Color black.                                                                                                                                   |
+| Features include opening and closing doors. Color: White.                                                                                                                                                                                                                                     |
+| This 1:18 scale precision die cast replica features the 6 front headlights of the original, plus a detailed version of the 142 horsepower straight 8 engine, dual spares and their famous comprehensive dashboard. Color black.                                                               |
+| Features opening trunk,  working steering system                                                                                                                                                                                                                                              |
+| Precision crafted hand-assembled 1:18 scale reproduction of the 1952 15CV, with its independent spring suspension, working steering system, opening doors and hood, detailed engine and instrument panel, all topped of with a factory fresh baked enamel finish.                             |
+| This model features chrome trim and grille, opening hood, opening doors, opening trunk, detailed engine, working steering system. Color white.                                                                                                                                                |
+| 1969 Z/28 Chevy Camaro 1:24 scale replica. The operating parts of this limited edition 1:24 scale diecast model car 1969 Chevy Camaro Z28- hood, trunk, wheels, streering, suspension and doors- are particularly delicate due to their precise scale and require special care and attention. |
+| This replica features opening doors, superb detail and craftsmanship, working steering system, opening forward compartment, opening rear trunk with removable spare, 4 wheel independent spring suspension as well as factory baked enamel finish.                                            |
+| Features official die-struck logos and baked enamel finish. Comes with stand.                                                                                                                                                                                                                 |
+| Exact replia with official logos and insignias and retractable wheels                                                                                                                                                                                                                         |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+17 rows in set (0.00 sec)
+
++-------------+--------------+--------------------------------------+
+| orderNumber | customerName | PODUCT_NAMES                         |
++-------------+--------------+--------------------------------------+
+|       10109 | Alpha Cognac | 2003 Harley-Davidson Eagle Drag Bike |
+|       10106 | Alpha Cognac | 1958 Setra Bus                       |
+|       10103 | Alpha Cognac | 1968 Ford Mustang                    |
+|       10106 | Alpha Cognac | 2003 Harley-Davidson Eagle Drag Bike |
+|       10104 | Alpha Cognac | 2001 Ferrari Enzo                    |
+|       10109 | Alpha Cognac | 1972 Alfa Romeo GTA                  |
+|       10103 | Alpha Cognac | 2001 Ferrari Enzo                    |
+|       10105 | Alpha Cognac | 1962 LanciaA Delta 16V               |
+|       10102 | Alpha Cognac | 1962 LanciaA Delta 16V               |
+|       10110 | Alpha Cognac | 2003 Harley-Davidson Eagle Drag Bike |
++-------------+--------------+--------------------------------------+
+10 rows in set (0.00 sec)
+
++-------------+--------------------+
+| orderNumber | Avg(amount)        |
++-------------+--------------------+
+|       10100 |            43895.1 |
+|       10101 |         21292.8975 |
+|       10102 |  29347.08666666667 |
+|       10103 |         29149.7975 |
+|       10104 |  61003.93307692308 |
+|       10105 | 29757.182500000003 |
+|       10106 |           45985.24 |
+|       10107 |           41017.36 |
+|       10108 | 31338.576666666664 |
+|       10109 | 27894.053333333333 |
+|       10110 |  52602.60333333333 |
+|       10111 | 24825.393333333337 |
+|       10112 |           37877.44 |
+|       10113 |          64759.629 |
+|       10114 | 32401.226666666666 |
+|       10115 | 25931.733333333334 |
+|       10116 |           8360.025 |
+|       10117 |           43247.42 |
+|       10118 | 23159.426666666666 |
+|       10119 |  27558.52666666667 |
+|       10120 |         48841.1825 |
+|       10121 |          33760.735 |
+|       10122 | 24978.713333333333 |
+|       10123 |  8059.986666666667 |
+|       10124 | 27583.693333333333 |
+|       10125 |         48841.1825 |
+|       10126 |  40205.09333333333 |
+|       10127 |  49434.23499999999 |
+|       10128 |  61003.93307692308 |
+|       10129 |            29601.5 |
+|       10130 |            8826.42 |
+|       10131 |           19098.14 |
+|       10132 | 31427.457500000004 |
+|       10133 |  61003.93307692308 |
+|       10134 |  26190.11333333333 |
+|       10135 |          64759.629 |
+|       10136 | 23496.146666666667 |
+|       10137 |          33760.735 |
+|       10138 | 39275.284999999996 |
+|       10139 |  35866.51666666666 |
+|       10140 | 30195.767499999998 |
+|       10141 | 37987.049999999996 |
+|       10142 |          64759.629 |
+|       10143 | 36317.043333333335 |
+|       10144 |           8360.025 |
+|       10145 |  34853.98666666667 |
+|       10146 |           19098.14 |
+|       10147 |           27192.66 |
+|       10148 |         38499.0325 |
+|       10149 | 25109.254999999997 |
+|       10150 |           43247.42 |
+|       10151 |  34790.12666666667 |
+|       10152 | 19823.039999999997 |
+|       10153 |  61003.93307692308 |
+|       10154 |  4564.674999999999 |
+|       10155 |           37083.46 |
+|       10156 |  61003.93307692308 |
+|       10157 |          14475.955 |
+|       10158 |         29149.7975 |
+|       10159 |           74941.25 |
+|       10160 |           24024.23 |
+|       10161 |          50297.775 |
+|       10162 |           74941.25 |
+|       10163 | 25931.733333333334 |
+|       10164 |            17421.3 |
+|       10165 |           43247.42 |
+|       10166 |           32974.59 |
+|       10167 |  44753.11000000001 |
+|       10168 | 30195.767499999998 |
+|       10169 |         38499.0325 |
+|       10170 |            17421.3 |
+|       10171 |           20255.91 |
+|       10172 | 35123.159999999996 |
+|       10173 |           45985.24 |
+|       10174 | 19823.039999999997 |
+|       10175 |            29601.5 |
+|       10176 |          50545.695 |
+|       10177 |          24821.025 |
+|       10178 | 23496.146666666667 |
+|       10179 | 39275.284999999996 |
+|       10180 |          34526.205 |
+|       10181 |           55820.14 |
+|       10182 |          64759.629 |
+|       10183 |          33753.485 |
+|       10184 | 27361.809999999998 |
+|       10185 | 36317.043333333335 |
+|       10186 |           18009.52 |
+|       10187 |           48784.36 |
+|       10188 |           55820.14 |
+|       10189 |  34853.98666666667 |
+|       10190 |  61003.93307692308 |
+|       10191 |  50153.28999999999 |
+|       10192 |            43895.1 |
+|       10193 |          25106.685 |
+|       10194 |           47624.75 |
+|       10195 | 42777.994999999995 |
+|       10196 |          39736.035 |
+|       10197 | 23159.426666666666 |
+|       10198 | 31338.576666666664 |
+|       10199 |           23042.32 |
+|       10200 |           48784.36 |
+|       10201 | 24825.393333333337 |
+|       10202 | 32356.675000000003 |
+|       10203 |  61003.93307692308 |
+|       10204 |  49434.23499999999 |
+|       10205 |  61003.93307692308 |
+|       10206 |           37619.46 |
+|       10207 |           35429.89 |
+|       10208 |           47624.75 |
+|       10209 |           24024.23 |
+|       10210 |          33802.535 |
+|       10211 |           39551.93 |
+|       10212 |  61003.93307692308 |
+|       10213 |           18009.52 |
+|       10214 |  40205.09333333333 |
+|       10215 |           23042.32 |
+|       10216 | 32417.149999999998 |
+|       10217 | 37637.049999999996 |
+|       10218 |          14475.955 |
+|       10219 | 25109.254999999997 |
+|       10220 |          28878.215 |
+|       10221 |          33280.285 |
+|       10222 |           87489.23 |
+|       10223 |         48841.1825 |
+|       10224 |          34526.205 |
+|       10225 |           58856.78 |
+|       10226 |           87489.23 |
+|       10227 |           47624.75 |
+|       10228 |           18081.81 |
+|       10229 |          64759.629 |
+|       10230 |         21292.8975 |
+|       10231 |          24821.025 |
+|       10232 |           39120.42 |
+|       10233 |          18354.595 |
+|       10234 |           36160.56 |
+|       10235 |          37317.425 |
+|       10236 | 27894.053333333333 |
+|       10237 |  29347.08666666667 |
+|       10238 | 29757.182500000003 |
+|       10239 |  34790.12666666667 |
+|       10240 |          33802.535 |
+|       10241 | 22379.065000000002 |
+|       10242 |          16572.465 |
+|       10243 |           35429.89 |
+|       10244 |  61003.93307692308 |
+|       10245 |          39736.035 |
+|       10246 |  61003.93307692308 |
+|       10247 | 37987.049999999996 |
+|       10248 |           41017.36 |
+|       10249 |           18081.81 |
+|       10250 |           64600.34 |
+|       10251 |          18354.595 |
+|       10252 |           39551.93 |
+|       10253 | 38602.729999999996 |
+|       10254 | 31427.457500000004 |
+|       10255 | 22379.065000000002 |
+|       10256 | 29757.182500000003 |
+|       10257 |           64600.34 |
+|       10258 |  36307.39333333333 |
+|       10259 | 37637.049999999996 |
+|       10260 | 32356.675000000003 |
+|       10261 |           20255.91 |
+|       10262 |  61003.93307692308 |
+|       10263 | 35123.159999999996 |
+|       10264 |          17446.495 |
+|       10265 |          25106.685 |
+|       10266 |          50545.695 |
+|       10267 |  49434.23499999999 |
+|       10268 |           36160.56 |
+|       10269 |  27558.52666666667 |
+|       10270 |  35866.51666666666 |
+|       10271 |          64759.629 |
+|       10272 |           57985.67 |
+|       10273 |          33280.285 |
+|       10274 |           27192.66 |
+|       10275 |           45446.75 |
+|       10276 |           28598.98 |
+|       10277 |           43247.42 |
+|       10278 | 27583.693333333333 |
+|       10279 |  61003.93307692308 |
+|       10280 | 47058.630000000005 |
+|       10281 |           57985.67 |
+|       10282 |          64759.629 |
+|       10283 |          37317.425 |
+|       10284 | 39612.115000000005 |
+|       10285 |           51540.19 |
+|       10286 | 32401.226666666666 |
+|       10287 |           58856.78 |
+|       10288 | 37637.049999999996 |
+|       10289 |           55820.14 |
+|       10290 |            8826.42 |
+|       10291 |  44753.11000000001 |
+|       10292 |           41017.36 |
+|       10293 | 47058.630000000005 |
+|       10294 |           28598.98 |
+|       10295 |          17446.495 |
+|       10296 |           34993.92 |
+|       10297 |          28878.215 |
+|       10298 |  8059.986666666667 |
+|       10299 |           37083.46 |
+|       10300 |         21292.8975 |
+|       10301 | 39612.115000000005 |
+|       10302 | 38602.729999999996 |
+|       10303 | 27361.809999999998 |
+|       10304 | 32417.149999999998 |
+|       10305 |           51540.19 |
+|       10306 |  52602.60333333333 |
+|       10307 |          33753.485 |
+|       10308 | 42777.994999999995 |
+|       10309 |         29149.7975 |
+|       10310 |  50153.28999999999 |
+|       10311 |  61003.93307692308 |
+|       10312 |          64759.629 |
+|       10313 |           37619.46 |
+|       10314 |          50297.775 |
+|       10315 |           45446.75 |
+|       10316 |           39120.42 |
+|       10317 | 30195.767499999998 |
+|       10318 |           57985.67 |
+|       10319 |          16572.465 |
+|       10320 |           37877.44 |
+|       10321 |           32974.59 |
+|       10322 |            43895.1 |
+|       10323 |         21292.8975 |
+|       10324 |  29347.08666666667 |
+|       10325 |         29149.7975 |
+|       10326 |           37877.44 |
+|       10327 | 29757.182500000003 |
+|       10328 |           45985.24 |
+|       10329 |           41017.36 |
+|       10330 | 31338.576666666664 |
+|       10331 | 27894.053333333333 |
+|       10332 |  52602.60333333333 |
+|       10333 | 24825.393333333337 |
+|       10334 |           37877.44 |
+|       10335 |          64759.629 |
+|       10336 | 32401.226666666666 |
+|       10337 | 25931.733333333334 |
+|       10338 |           8360.025 |
+|       10339 |  36307.39333333333 |
+|       10340 | 23159.426666666666 |
+|       10341 |  27558.52666666667 |
+|       10342 |         48841.1825 |
+|       10343 |          33760.735 |
+|       10344 | 24978.713333333333 |
+|       10345 |  8059.986666666667 |
+|       10346 | 27583.693333333333 |
+|       10347 |         48841.1825 |
+|       10348 |  40205.09333333333 |
+|       10349 |  49434.23499999999 |
+|       10350 |  61003.93307692308 |
+|       10351 |            29601.5 |
+|       10352 |            8826.42 |
+|       10353 |           19098.14 |
+|       10354 | 31427.457500000004 |
+|       10355 |  61003.93307692308 |
+|       10356 |  26190.11333333333 |
+|       10357 |          64759.629 |
+|       10358 |  61003.93307692308 |
+|       10359 |          33760.735 |
+|       10360 | 39275.284999999996 |
+|       10361 |  35866.51666666666 |
+|       10362 | 30195.767499999998 |
+|       10363 | 37987.049999999996 |
+|       10364 | 24978.713333333333 |
+|       10365 | 36317.043333333335 |
+|       10366 |           8360.025 |
+|       10367 |  34853.98666666667 |
+|       10368 |          64759.629 |
+|       10369 |           27192.66 |
+|       10370 |         38499.0325 |
+|       10371 |          64759.629 |
+|       10372 |  36307.39333333333 |
+|       10373 |  34790.12666666667 |
+|       10374 | 19823.039999999997 |
+|       10375 |           45446.75 |
+|       10376 |  4564.674999999999 |
+|       10377 |           37083.46 |
+|       10378 |  61003.93307692308 |
+|       10379 |  61003.93307692308 |
+|       10380 |  61003.93307692308 |
+|       10381 |           74941.25 |
+|       10382 |          64759.629 |
+|       10383 |  61003.93307692308 |
+|       10384 |           74941.25 |
+|       10385 |          64759.629 |
+|       10386 |  61003.93307692308 |
+|       10387 |           43247.42 |
+|       10388 |           32974.59 |
+|       10389 |  44753.11000000001 |
+|       10390 |          64759.629 |
+|       10391 |         38499.0325 |
+|       10392 |            17421.3 |
+|       10393 | 31427.457500000004 |
+|       10394 |  61003.93307692308 |
+|       10395 |  26190.11333333333 |
+|       10396 |          64759.629 |
+|       10397 | 23496.146666666667 |
+|       10398 |          33760.735 |
+|       10399 | 39275.284999999996 |
+|       10400 |           64600.34 |
+|       10401 |          18354.595 |
+|       10402 |           39551.93 |
+|       10403 | 38602.729999999996 |
+|       10404 | 31427.457500000004 |
+|       10405 | 22379.065000000002 |
+|       10406 | 29757.182500000003 |
+|       10407 |           64600.34 |
+|       10408 |  36307.39333333333 |
+|       10409 | 37637.049999999996 |
+|       10410 | 32356.675000000003 |
+|       10411 |           20255.91 |
+|       10412 |  61003.93307692308 |
+|       10413 | 35123.159999999996 |
+|       10414 |          17446.495 |
+|       10415 |          25106.685 |
+|       10416 |          50545.695 |
+|       10417 |  61003.93307692308 |
+|       10418 |           36160.56 |
+|       10419 |  27558.52666666667 |
+|       10420 |  35866.51666666666 |
+|       10421 |          64759.629 |
+|       10422 |           57985.67 |
+|       10423 |          33280.285 |
+|       10424 |  61003.93307692308 |
+|       10425 |           45446.75 |
++-------------+--------------------+
+326 rows in set (0.00 sec)
+
+mysql> \t

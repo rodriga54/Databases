@@ -1,0 +1,101 @@
+/******************************/
+/* Abraham Rodriguez          */
+/* ZID: Z1758468              */
+/* Due Date: 10/29/2015       */
+/******************************/
+
+/******************************/
+/* Part I: Power of Commit    */
+/******************************/
+
+/******************************/
+/* First session of SQL       */
+/******************************/
+/* 1 */
+\T Assgn7out.txt
+use z17586468;
+create table Tran(pk int primary key,data char(15));
+start transaction;
+insert into Tran values(11, 'data11');
+insert into Tran values(12, 'data12');
+insert into Tran values(13, 'data13');
+
+/******************************/
+/* Second session of SQL      */
+/******************************/
+/* 2 */
+\T Assgn7out.txt
+use z1758468;
+select * from Tran;
+
+/* ############################### 2 Answer ################################ */
+/* Empty set, nothing from the table show up in Tran table. I have started the 
+/* transaction but have not committed the transaction. 
+/* ######################################################################### */
+
+/* 3 */
+insert into Tran values(114, 'data114');
+insert into Tran values(115, 'data115');
+
+/******************************/
+/* First session of SQL       */
+/******************************/
+/* 4 */
+commit;
+select * from Tran;
+\t
+exit;
+
+/*****************************/
+/* Second session of SQL     */
+/*****************************/
+/* 5 */
+select * from Tran;
+\t
+exit;
+
+/* ############################### 5 Answer ################################ */
+/* After the table was committed we are then able to see the entire table 
+/* set of data.
+/* ######################################################################### */
+
+/******************************/
+/* Part II: Power of Rollback */
+/******************************/
+/*****************************/
+/* Third session of SQL      */
+/*****************************/
+/* 1 */
+\T Assgn7out.txt
+use z1758468;
+start transaction;
+delete from Tran where pk = 13;
+select * from Tran;
+
+/* 2 */
+Update Tran set data = 'changed' where pk = 12;
+
+/* 3 */
+Update Tran set data = 'changed too' where pk = 114;
+
+/* 4 */
+insert into Tran values(213, 'data213');
+select * from Tran;
+
+/* ############################### 4 Answer ################################ */
+/* All deletes and updates commands took effect immediately within the same session.
+/* Others accessing this table will not be able to see current updated table in
+/* in my session until I commit table.
+/* ######################################################################### */
+
+/* 5 */
+rollback;
+select * from Tran;
+\t
+exit;
+
+/* ############################### 5 Answer ################################ */
+/* since I never committed the table, changes I made were never updated.
+/* once the rollback statement was entered, the changes I had just made were 
+/* canceled.
+/* ######################################################################### */

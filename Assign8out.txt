@@ -1,0 +1,146 @@
+
+mysql> \T Assgn7out.txt
+mysql> use z17586468;
+ERROR 1044 (42000): Access denied for user 'z1758468'@'192.168.8.%' to database 'z17586468'
+mysql> create table Tran(pk int primary key,data char(15));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert into Tran values(11, 'data11');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Tran values(12, 'data12');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Tran values(13, 'data13');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Tran;
+Empty set (0.00 sec)
+
+mysql> \T Assgn7out.txt
+mysql> use z1758468;
+Database changed
+mysql> select * from Tran;
+Empty set (0.00 sec)
+
+mysql> insert into Tran values(114, 'data114');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into Tran values(115, 'data115');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> select * from Tran;
++-----+---------+
+| pk  | data    |
++-----+---------+
+|  11 | data11  |
+|  12 | data12  |
+|  13 | data13  |
+| 114 | data114 |
+| 115 | data115 |
++-----+---------+
+5 rows in set (0.00 sec)
+
+mysql> \t
+mysql> select * from Tran;
++-----+---------+
+| pk  | data    |
++-----+---------+
+|  11 | data11  |
+|  12 | data12  |
+|  13 | data13  |
+| 114 | data114 |
+| 115 | data115 |
++-----+---------+
+5 rows in set (0.00 sec)
+
+mysql> \t
+mysql> use z1758468;
+Database changed
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> delete from Tran where pk = 13;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Tran;
++-----+---------+
+| pk  | data    |
++-----+---------+
+|  11 | data11  |
+|  12 | data12  |
+| 114 | data114 |
+| 115 | data115 |
++-----+---------+
+4 rows in set (0.00 sec)
+
+mysql> Update Tran set data = 'changed' where pk = 12;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> Update Tran set data = 'changed too' where pk = 114;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> insert into Tran values(213, 'data213');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Tran;
++-----+-------------+
+| pk  | data        |
++-----+-------------+
+|  11 | data11      |
+|  12 | changed     |
+| 114 | changed too |
+| 115 | data115     |
+| 213 | data213     |
++-----+-------------+
+5 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> select * from Tran;
++-----+---------+
+| pk  | data    |
++-----+---------+
+|  11 | data11  |
+|  12 | data12  |
+|  13 | data13  |
+| 114 | data114 |
+| 115 | data115 |
++-----+---------+
+5 rows in set (0.00 sec)
+
+mysql> \t
+mysql> use z1758468
+Database changed
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> use z1758468
+Database changed
+mysql> start transaction
+    -> ;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> update Tran set data = 'data11A' where pk =11;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Tran set data = 'data22B' where pk = 12;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Tran set data = 'data21B' where pk = 12;
+Query OK, 1 row affected (26.49 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Tran set data = 'data12B' where pk = 11;
+ERROR 1213 (40001): Deadlock found when trying to get lock; try restarting transaction
